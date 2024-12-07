@@ -10,7 +10,7 @@
 
 #Features
 
--Accepts user queries through a responsive web interface.
+*Accepts user queries through a responsive web interface.
 -Integrates with Hugging Face's model API for natural language generation.
 -Supports API key management via environment variables for security.
 -Lightweight and easy to deploy.
