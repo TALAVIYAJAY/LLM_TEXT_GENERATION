@@ -8,7 +8,7 @@ This tool is a web-based application that utilizes a pre-trained language model 
 
 The application is designed for simplicity, featuring a clean frontend interface for interacting with the model and a robust backend for handling requests
 
-#Features
+# Features
 
 Accepts user queries through a responsive web interface.
 
