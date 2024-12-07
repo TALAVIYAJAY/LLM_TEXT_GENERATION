@@ -17,3 +17,14 @@ Integrates with Hugging Face's model API for natural language generation.
 Supports API key management via environment variables for security.
 
 Lightweight and easy to deploy.
+
+# Setup and Installation
+# Prerequisites
+
+Python 3.10 or higher
+
+Git
+
+A Hugging Face account and API key
+
+Django installed on your system
