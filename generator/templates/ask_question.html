@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ask a Question</title>
+    <style>
+        /* Overall background */
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #a8c0ff, #3f2b96); /* Gradient background */
+            color: #333;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Container for the content */
+        .container {
+            background-color: #fff;
+            border-radius: 15px;
+            padding: 40px 50px;
+            box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 600px;
+            position: relative;
+            text-align: center;
+        }
+
+        /* Decorative circle */
+        .circle {
+            position: absolute;
+            top: -80px;
+            right: -120px;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background-color: #f5a623;
+            opacity: 0.15;
+            z-index: -1;
+        }
+
+        /* Header style */
+        h1 {
+            font-size: 32px;
+            margin-bottom: 20px;
+            color: #2e2e2e;
+        }
+
+        /* Input box styling */
+        input[type="text"] {
+            width: 100%;
+            padding: 15px;
+            margin: 10px 0;
+            font-size: 16px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            outline: none;
+            transition: border-color 0.3s ease;
+        }
+
+        input[type="text"]:focus {
+            border-color: #3f2b96;
+        }
+
+        /* Submit button styling */
+        button {
+            padding: 15px 30px;
+            background-color: #3f2b96;
+            color: white;
+            font-size: 18px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #2c1a6e;
+        }
+
+        /* Model response container */
+        .response {
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #f8f8f8;
+            border-radius: 10px;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+            text-align: left;
+            max-height: 200px;
+            overflow-y: auto;
+            position: relative;
+        }
+
+        /* Decorative square shape */
+        .square {
+            position: absolute;
+            bottom: -60px;
+            left: -80px;
+            width: 120px;
+            height: 120px;
+            background-color: #f5a623;
+            opacity: 0.2;
+            z-index: -1;
+            border-radius: 12px;
+        }
+
+        /* Styling for model response */
+        .response h3 {
+            font-size: 24px;
+            color: #333;
+        }
+
+        .response p {
+            font-size: 18px;
+            color: #555;
+            line-height: 1.6;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="circle"></div> <!-- Decorative circle -->
+        <div class="square"></div> <!-- Decorative square -->
+
+        <h1>Ask a Question</h1>
+
+        <!-- Form to ask the question -->
+        <form method="POST">
+            {% csrf_token %}
+            <input type="text" name="question" placeholder="Ask your question here" required>
+            <button type="submit">Generate</button>
+        </form>
+
+        <!-- Display the response -->
+        {% if response %}
+            <div class="response">
+                <h3>Model Response:</h3>
+                <p>{{ response }}</p>
+            </div>
+        {% endif %}
+    </div>
+
+</body>
+</html>
