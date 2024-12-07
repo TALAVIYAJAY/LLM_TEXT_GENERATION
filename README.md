@@ -30,7 +30,39 @@ A Hugging Face account and API key
 Django installed on your system
 
 # Step 1: Clone the Repository
-git clone https://github.com/<your-username>/<your-repo-name>.git
+git clone https://github.com/TALAVIYAJAY/LLM_TEXT_GENERATION.git
 
-cd <your-repo-name>
+cd LLM_TEXT_GENERATION
+
+# Step 2: Set Up a Virtual Environment
+python -m venv env
+
+source env/bin/activate    # For macOS/Linux
+
+env\Scripts\activate       # For Windows
+
+# Step 3: Install Dependencies
+pip install -r requirements.txt
+
+# Step 4: Set Up Environment Variables
+Add your Hugging Face API key in .env file
+
+# Step 5: Run Database Migrations
+python manage.py migrate
+
+# Step 6: Start the Server
+python manage.py runserver
+
+# Step 7: Access the Application
+Open your web browser and navigate to http://127.0.0.1:8000.
+
+# Example Input/Output
+Input: What is the Pythagorean theorem?
+
+Output: The Pythagorean theorem states that in a right triangle, the square of the length of the hypotenuse is equal to the sum of the squares of the lengths of the other two sides.
+
+# Deployed Tool
+The application is also deployed for public access. You can try it here:
+
+https://huggingface.co/spaces/STREAK7744/gpt_neo_2.7B
 
