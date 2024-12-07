@@ -28,3 +28,9 @@ Git
 A Hugging Face account and API key
 
 Django installed on your system
+
+# Step 1: Clone the Repository
+git clone https://github.com/<your-username>/<your-repo-name>.git
+
+cd <your-repo-name>
+
